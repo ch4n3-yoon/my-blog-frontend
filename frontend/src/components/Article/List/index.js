@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
+
+import { ArticleProvider, useArticle } from "../../../contexts/useArticle"
 import { Container, InnerContainer } from "../../Container"
 import styles from "./styles.module.scss"
 
@@ -21,11 +23,26 @@ export const Item = (props) => {
 }
 
 export const List = ({ children }) => {
+
+  const article = useArticle()
+
+  if (article.articles === null) return <div>Loading...</div>
   return (
     <div className={styles.padding}>
       <Container>
         <InnerContainer>
           <ul>
+            {article.articles.map(article => {
+              return (
+                <Item
+                  id={article.id}
+                  category={article.category || "카테고리"}
+                  title={article.title}
+                  short={article.content}
+                  createAt={article.createdAt}
+                />
+              )
+            })}
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((_) => {
               return (
                 <Item

@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid transparent;
+  background-color: #fff;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+
+.row {
+  display: flex;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.navbarContent {
+  display: flex;
+  margin-left: auto;
+  overflow-y: hidden;
+  max-height: 100%;
+  justify-content: space-between;
+  transition: 0.2s ease;
+}
+
+.navbarItem {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  padding: 12px 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: currentColor;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: left;
+}

@@ -8,6 +8,8 @@ export const Detail = () => {
   return (
     <div>
       <h1>{article.article?.title}</h1>
+      <hr/>
+      <div>{article.article?.content}</div>
     </div>
   )
 }

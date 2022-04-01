@@ -32,7 +32,7 @@ export const List = ({ children }) => {
       <Container>
         <InnerContainer>
           <ul>
-            {article.articles.map(article => {
+            {article?.articles?.map(article => {
               return (
                 <Item
                   id={article.id}
